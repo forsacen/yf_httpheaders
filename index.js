@@ -8,7 +8,7 @@ function httpHeaders(){}
 httpHeaders.prototype.getOne=function(){
     return {
         'Accept-Language': 'zh-CN,zh;q=0.9',
-        'User-Agent':agents[Math.floor(Math.random()*agents.length)],
+        'User-Agent':(agents[Math.floor(Math.random()*agents.length)]).trimR('(\\r)|(\\n)'),
         'Connection':'keep-alive',
         'CacheControl':'no-cache',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
